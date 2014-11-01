@@ -10,6 +10,7 @@
         vm.title = 'clientCtrl';
 
         activate();
+        //test
 
         function activate() { }
     }

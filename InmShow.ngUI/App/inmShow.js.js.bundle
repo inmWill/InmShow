@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true" output="inmShow.js">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+  <file>/App/app.js</file>
+  <file>/Services/authInterceptorService.js</file>
+  <file>/Services/authService.js</file>
+  <file>/Services/abstractsService.js</file>
+  <file>/App/Nav/indexController.js</file>
+  <file>/App/Nav/homeController.js</file>
+  <file>/App/Auth/loginController.js</file>
+  <file>/App/Auth/signupController.js</file>
+  <file>/App/Client/clientCtrl.js</file>
+
+</bundle>

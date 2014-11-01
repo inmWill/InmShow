@@ -57,7 +57,40 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.min.js">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
+    <Content Include="App\Auth\loginController.js" />
+    <Content Include="App\Auth\signupController.js" />
+    <Content Include="App\Client\clientCtrl.min.js">
+      <DependentUpon>clientCtrl.js</DependentUpon>
+    </Content>
+    <Content Include="App\inmShow.js">
+      <DependentUpon>inmShow.js.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="App\inmShow.min.js">
+      <DependentUpon>inmShow.js.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="App\Nav\homeController.js" />
+    <Content Include="App\Nav\indexController.js" />
+    <Content Include="Content\loading-bar.min.css" />
+    <Content Include="Content\paperbootstrap.min.css" />
+    <Content Include="Scripts\angular-local-storage.min.js" />
+    <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="SearchPageProto.html" />
     <Content Include="packages.config" />
+    <Content Include="App\app.min.js.map">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
+    <Content Include="App\Client\clientCtrl.min.js.map">
+      <DependentUpon>clientCtrl.js</DependentUpon>
+    </Content>
+    <None Include="App\inmShow.js.js.bundle">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App\inmShow.min.js.map">
+      <DependentUpon>inmShow.js.js.bundle</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\InmergeShow.pubxml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
@@ -406,7 +439,14 @@
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Views\ClientPartial.html" />
+    <Content Include="Services\abstractsService.js" />
+    <Content Include="Services\authInterceptorService.js" />
+    <Content Include="Services\authService.js" />
+    <Content Include="Views\Abstracts.html" />
+    <Content Include="Views\Client.html" />
+    <Content Include="Views\Home.html" />
+    <Content Include="Views\Login.html" />
+    <Content Include="Views\Signup.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>

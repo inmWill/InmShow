@@ -1,24 +1,34 @@
-﻿(function () {
-    'use strict';
+﻿var app = angular.module('inmShowApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
 
-    angular.module('inmShowApp', ['ngAnimate', 'ngRoute']).config(['$routeProvider',
-        function ($routeProvider) {
-            $routeProvider.
-                when('/client', {
-                    templateUrl: 'Views/ClientPartial.html'
-                    //    controller: 'ClientCtrl'
-                }).
-                when('/audit', {
-                    templateUrl: 'Views/ClientPartial.html'
-                    //     controller: 'AuditCtrl'
-                }).
-                when('/batch', {
-                    templateUrl: 'Views/ClientPartial.html'
-                    //   controller: 'AuditCtrl'
-                }).
-                otherwise({
-                    redirectTo: '/client'
-                });
-        }]);
+app.config(function ($routeProvider) {
 
-})();
+    $routeProvider.when("/home", {
+        controller: "homeController",
+        templateUrl: "/views/home.html"
+    });
+
+    $routeProvider.when("/login", {
+        controller: "loginController",
+        templateUrl: "/views/login.html"
+    });
+
+    $routeProvider.when("/signup", {
+        controller: "signupController",
+        templateUrl: "/views/signup.html"
+    });
+
+    $routeProvider.when("/orders", {
+        controller: "ordersController",
+        templateUrl: "/views/orders.html"
+    });
+
+    $routeProvider.otherwise({ redirectTo: "/home" });
+});
+
+app.run(['authService', function (authService) {
+    authService.fillAuthData();
+}]);
+
+app.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+});

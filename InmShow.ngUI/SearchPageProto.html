@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="en" ng-app="inmShowApp">
+<head>
+    <meta charset="utf-8">
+    <title>DEV Quick Search</title>
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="content/font-awesome.css">
+    <link rel="stylesheet" href="Content/app.css">
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="Scripts/angular-route.js"></script>
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="App/inmShow.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>DEV Quick Search</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active"><a href="#">Employees</a></li>
+                                    <li><a href="#">Dependents</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select name="selclient" class="form-control">
+                                    <option>-- Select a Client --</option>
+                                    <option>Wilco</option>
+                                    <option>Testco</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="firstname">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" placeholder="First name" name="firstname" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="lastname">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" placeholder="Last name" name="lastname" class="form-control">
+                            </div>                          
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="lastfourssn">Last Four SSN</label>
+                            <div class="col-sm-10">
+                                <input type="text" placeholder="Last four social security digits" name="lastfourssn" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput">Country</label>
+                            <div class="col-sm-10">
+                                <input type="text" placeholder="Country" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-default">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>        
+            </div>
+            <div class="col-sm-8">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Date registered</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td>Editor</td>
+                            <td>
+                                <span class="label label-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Emily F. Burns</td>
+                            <td>2011/12/01</td>
+                            <td>Staff</td>
+                            <td><span class="label label-important">Banned</span></td>
+                        </tr>
+                        <tr>
+                            <td>Andrew A. Stout</td>
+                            <td>2010/08/21</td>
+                            <td>User</td>
+                            <td><span class="label">Inactive</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mary M. Bryan</td>
+                            <td>2009/04/11</td>
+                            <td>Editor</td>
+                            <td><span class="label label-warning">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mary A. Lewis</td>
+                            <td>2007/02/01</td>
+                            <td>Staff</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

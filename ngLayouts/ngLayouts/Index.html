@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en" ng-app="devEtlApp">
+<head>
+    <meta charset="utf-8">
+    <title>ConSova DEV Client DataLoads</title>
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <!--<link href="Content/ripples.css" rel="stylesheet">
+    <link href="Content/material.css" rel="stylesheet">-->
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/app.css">
+
+    <script type="text/javascript" src="Vendor/Scripts/angular.js"></script>
+    <script type="text/javascript" src="vendor/scripts/angular-route.js"></script>
+    <script type="text/javascript" src="vendor/scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="App/app.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:void(0)"><img src="Images/consLogo.png" alt="" /></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-group">
+                    <select class="form-control" id="select">
+                        <option>Select Client</option>
+                        <option>SLVHA</option>
+                        <option>Bertlesmann</option>
+                        <option>On The Border</option>
+                        <option>Hain Celestial</option>
+                    </select>
+                    <span class="input-group-btn"><a href="#/settings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <select class="form-control" id="select">
+                        <option>Select Audit</option>
+                        <option>12/01/12013 - Ongoing</option>
+                        <option>1/01/12014 - Ongoing</option>
+                        <option>2/01/12014 - Ongoing</option>
+                        <option>Working Spouse Surcharge</option>
+                    </select>
+                    <span class="input-group-btn"><a href="#/audit" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <select class="form-control" id="select">
+                        <option>Select Profile</option>
+                        <option>Ongoing</option>
+                        <option>100% Initial Audit</option>
+                        <option>Carve Out</option>
+                        <option>Working Spouse Surcharge</option>
+                    </select>
+                    <span class="input-group-btn"><a href="#/etlsettings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a href="#/batch" class="btn btn-primary btn-raised">Load Client Data <i class="fa fa-play"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+</html>
+
