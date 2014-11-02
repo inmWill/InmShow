@@ -418,6 +418,7 @@
     <None Include="Vendor\Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Vendor\Scripts\jquery-1.9.1.js" />
     <Content Include="Vendor\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Views\Home.html" />
     <Content Include="Views\AuditDetails.html" />
     <Content Include="Views\BatchDetails.html" />
     <Content Include="Views\ClientSettings.html" />

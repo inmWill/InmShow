@@ -20,6 +20,14 @@
                     templateUrl: 'Views/ETLDetails.html'
                     //     controller: 'AuditCtrl'
                 }).
+                when('/home', {
+                    templateUrl: 'Views/Home.html'
+                    //     controller: 'AuditCtrl'
+                }).
+                when('/results', {
+                    templateUrl: 'Views/results.html'
+                    //     controller: 'AuditCtrl'
+                }).
                 when('/batch', {
                     templateUrl: 'Views/BatchDetails.html'
                  //   controller: 'AuditCtrl'
