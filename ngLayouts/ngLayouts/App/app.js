@@ -33,7 +33,7 @@
                  //   controller: 'AuditCtrl'
                 }).
                 otherwise({
-                    redirectTo: '/client'
+                    redirectTo: '/home'
                 });
         }]);
 

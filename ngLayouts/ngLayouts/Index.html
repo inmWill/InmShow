@@ -13,6 +13,7 @@
     <script type="text/javascript" src="vendor/scripts/angular-route.js"></script>
     <script type="text/javascript" src="vendor/scripts/angular-animate.js"></script>
     <script type="text/javascript" src="App/app.js"></script>
+    <script src="App/Client/clientCtrl.js"></script>
 </head>
 <body>
     <div class="navbar navbar-default">
@@ -20,40 +21,36 @@
             <a class="navbar-brand" href="#/home"><img src="Images/consLogo.png" alt="" /></a>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="container" ng-controller="clientCtrl as vm">
+        <div class="row top-buffer">
+            <div class="col-md-12 text-center">
+                <h3 ng-show="vm.activeClient.name == 'Hain Celestial'" class="text-danger"><strong><i class=" fa fa-times-circle-o fa-4x" style="vertical-align: middle; "></i> <span>There was a problem loading the date, please contact support.</span></strong></h3>
+                <h3 ng-show="vm.activeClient == null" class="text-info"><strong><i class=" fa fa-arrow-circle-o-right fa-4x" style="vertical-align: middle; "></i> <span>Select a client to begin.</span></strong></h3>
+                <h3 ng-show="vm.activeClient.name == 'SLVHA'" class="text-warning"><strong><i class=" fa fa fa-exclamation-circle fa-4x" style="vertical-align: middle; "></i> <span>ETL setup required.</span></strong></h3>
+                <h3 ng-show="vm.activeClient.name == 'On The Border'" class="text-success"><strong><i class=" fa fa-check-circle-o fa-4x" style="vertical-align: middle; "></i> <span>{{vm.activeClient.name}} Data was loaded on January 1, 2014.</span></strong></h3>
+            </div>
+        </div>
+        <div class="row top-buffer">
             <div class="col-md-3">
                 <div class="input-group">
-                    <select class="form-control" id="select">
-                        <option>Select Client</option>
-                        <option>SLVHA</option>
-                        <option>Bertlesmann</option>
-                        <option>On The Border</option>
-                        <option>Hain Celestial</option>
+                    <select class="form-control" ng-model="vm.activeClient" ng-options="client.name for client in vm.clients">
+                        <option value="">-- Select Client --</option>
                     </select>
                     <span class="input-group-btn"><a href="#/settings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="input-group">
-                    <select class="form-control" id="select">
-                        <option>Select Audit</option>
-                        <option>12/01/12013 - Ongoing</option>
-                        <option>1/01/12014 - Ongoing</option>
-                        <option>2/01/12014 - Ongoing</option>
-                        <option>Working Spouse Surcharge</option>
+                    <select class="form-control" ng-model="vm.activeAudit" ng-options="audit.name for audit in vm.audits">
+                        <option value="">-- Select Audit --</option>
                     </select>
                     <span class="input-group-btn"><a href="#/audit" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="input-group">
-                    <select class="form-control" id="select">
-                        <option>Select Profile</option>
-                        <option>Ongoing</option>
-                        <option>100% Initial Audit</option>
-                        <option>Carve Out</option>
-                        <option>Working Spouse Surcharge</option>
+                    <select class="form-control" ng-model="vm.activeProfile" ng-options="profile.name for profile in vm.profiles">
+                        <option value="">-- Select Import Profile --</option>
                     </select>
                     <span class="input-group-btn"><a href="#/etlsettings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
                 </div>
@@ -63,7 +60,10 @@
             </div>
         </div>
         <div class="row top-buffer">
-            <div class="col-md-12"></div>
+            <div class="col-md-12">             
+            </div>
+        </div>
+        <div class="row top-buffer">
             <div ng-view></div>
         </div>
     </div>
