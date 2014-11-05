@@ -1,11 +1,18 @@
-﻿'use strict';
-app.controller('indexController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+﻿(function() {
+    'use strict';
 
-    $scope.logOut = function () {
-        authService.logOut();
-        $location.path('/home');
-    }
+    angular
+        .module('inmShowApp')
+        .controller('indexController', [
+            '$scope', '$location', 'authService', function($scope, $location, authService) {
 
-    $scope.authentication = authService.authentication;
+                $scope.logOut = function() {
+                    authService.logOut();
+                    $location.path('/home');
+                }
 
-}]);
+                $scope.authentication = authService.authentication;
+
+            }
+        ]);
+})();

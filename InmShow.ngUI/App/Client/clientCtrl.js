@@ -3,11 +3,11 @@
 
     angular
         .module('inmShowApp')
-        .controller('clientCtrl', ['$location', clientCtrl]);
+        .controller('ClientCtrl', ['$scope', ClientCtrl]);
 
-    function clientCtrl($location) {
+    function ClientCtrl($scope) {
         var vm = this;
-        vm.title = 'clientCtrl';
+        vm.title = 'ClientCtrl';
 
         activate();
         //test
